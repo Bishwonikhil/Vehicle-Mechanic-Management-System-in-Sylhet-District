@@ -1,4 +1,3 @@
-
 package project;
 
 import java.io.*;
@@ -10,7 +9,7 @@ public class InsertMechanic {
 
     public void add() throws IOException {
 
-        String name, wheel, contact, location;
+        String name, type, contact, location;
 
         File dir = new File("Project");
         //dir.mkdir();
@@ -22,18 +21,26 @@ public class InsertMechanic {
         s = new Scanner(file);
         Scanner in = new Scanner(System.in);
 
-
-        System.out.print("Please enter your Name: ");
+        System.out.println("Enter the Name: ");
         name = in.nextLine();
 
-        System.out.print("Location: ");
+        System.out.println("Enter the Location: ");
         location = in.nextLine();
 
-        System.out.print("Wheel number's of your vehicle: ");
-        wheel = in.nextLine();
+        System.out.println("Enter the Type: ");
+        type = in.nextLine();
+
+        System.out.println("Enter the Number: ");
+        contact = in.next();
 
 
-        //System.out.println("Successfully Inserted your information.");
+        FileWriter fileWriter = new FileWriter(file,true);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        PrintWriter printWriter = new PrintWriter(bufferedWriter);
+
+
+
+        System.out.println("Successfully Inserted your information.");
 
 
     }

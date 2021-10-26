@@ -1,13 +1,12 @@
-
 package project;
 
 import java.io.File;
-
+import java.io.IOException;
 
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 
         File dir = new File("Project");
         dir.mkdir();
@@ -19,9 +18,9 @@ public class Main {
 
         System.out.println("Are you Mechanic?");
 
+
         InsertMechanic add = new InsertMechanic();
         add.add();
-
 
 
 
