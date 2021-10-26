@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
 
         File dir = new File("Project");
         dir.mkdir();
@@ -16,14 +16,16 @@ public class Main {
         file.createNewFile();
 
 
-        System.out.println("Are you Mechanic?");
+        //System.out.println("1. Are you Mechanic?");
+        System.out.println("2. Are you User?");
 
+        //InsertMechanic add = new InsertMechanic();
+        //add.add();
 
-        InsertMechanic add = new InsertMechanic();
-        add.add();
-
+        SearchMechanic search = new SearchMechanic();
+        search.search();
 
 
     }
-
 }
+
