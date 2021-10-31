@@ -1,3 +1,4 @@
+
 package project;
 
 import java.io.*;
@@ -11,36 +12,38 @@ public class InsertMechanic {
 
         String name, type, contact, location;
 
-        File dir = new File("Project");
-        //dir.mkdir();
-        String path = dir.getAbsolutePath();
+            File dir = new File("Project");
+            //dir.mkdir();
+            String path = dir.getAbsolutePath();
 
-        File file = new File(path + "/Mechanic.txt");
-        //file.createNewFile();
+            File file = new File(path + "/Mechanic.txt");
+            //file.createNewFile();
 
-        s = new Scanner(file);
-        Scanner in = new Scanner(System.in);
+            s = new Scanner(file);
+            Scanner in = new Scanner(System.in);
 
-        System.out.println("Enter the Name: ");
-        name = in.nextLine();
+            System.out.print("Please enter the Name: ");
+            name = in.nextLine();
 
-        System.out.println("Enter the Location: ");
-        location = in.nextLine();
+            System.out.print("Location: ");
+            location = in.nextLine();
 
-        System.out.println("Enter the Type: ");
-        type = in.nextLine();
+            System.out.print("Wheel's type: ");
+            type = in.nextLine();
 
-        System.out.println("Enter the Number: ");
-        contact = in.next();
-
-
-        FileWriter fileWriter = new FileWriter(file,true);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-        PrintWriter printWriter = new PrintWriter(bufferedWriter);
+            System.out.print("Number: ");
+            contact = in.next();
 
 
+            FileWriter fileWriter = new FileWriter(file,true);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            PrintWriter printWriter = new PrintWriter(bufferedWriter);
 
-        System.out.println("Successfully Inserted your information.");
+            printWriter.println(name + "\n" + location + "\n" + type + "\n" + contact);
+            printWriter.flush();
+            printWriter.close();
+
+            System.out.println("Insert Done");
 
 
     }
